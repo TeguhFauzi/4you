@@ -4,7 +4,7 @@ import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 import * as schema from '../lib/schema';
 import { hashPassword } from '../lib/auth';
-import { v4 as uuidv4 } from 'uuid'; 
+
 const sql = neon(process.env.DATABASE_URL!);
 const db = drizzle(sql, { schema });
 async function seed() {
