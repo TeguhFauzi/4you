@@ -1,0 +1,229 @@
+.main {
+  padding-bottom: 80px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #E0F2FE 0%, var(--bg-color) 150px);
+}
+
+.bannerSection {
+  padding: 10px 20px 24px;
+}
+.bannerCard {
+  background: linear-gradient(135deg, var(--primary-blue), #3B82F6);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.bannerContent {
+  position: relative;
+  z-index: 2;
+  max-width: 65%;
+}
+.bannerContent h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.bannerContent p {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+.primaryBtn {
+  background: white;
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 10px 16px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+.primaryBtn:active {
+  transform: scale(0.95);
+}
+.bannerIcon {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 120px;
+  height: 120px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.categoriesSection {
+  background: var(--surface-color);
+  border-radius: 24px 24px 0 0;
+  padding: 24px 20px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.03);
+}
+.sectionHeader h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.sectionHeader p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 12px;
+  margin-top: 20px;
+}
+.categoryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+.iconBox {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-blue);
+  transition: transform 0.2s ease;
+}
+.categoryItem:active .iconBox {
+  transform: scale(0.92);
+}
+.categoryItem span {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+.packagesSection {
+  padding: 32px 20px;
+  background: var(--surface-color);
+}
+.sectionHeaderLine {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sectionHeaderLine h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.badge {
+  background: #F97316;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.sectionDesc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  line-height: 1.4;
+}
+.carousel {
+  margin-top: 16px;
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.packageCard {
+  min-width: 280px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+.packageImg {
+  height: 140px;
+  background: #E2E8F0;
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+}
+.packageTag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #F97316;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.favoriteTag {
+  position: absolute;
+  top: 12px;
+  left: 64px;
+  background: white;
+  color: var(--text-main);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.imgOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 16px 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+.imgOverlay h4 {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+.packageDetails {
+  padding: 16px;
+}
+.packageDetails > p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.priceLabel {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.priceValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-top: 2px;
+}
+.textBtn {
+  color: var(--primary-blue);
+  font-size: 12px;
+  font-weight: 600;
+}

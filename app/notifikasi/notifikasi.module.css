@@ -1,0 +1,126 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--bg-color, #F8FAFC);
+  padding-bottom: 40px;
+}
+.header {
+  background: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.backBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main, #0F172A);
+  padding: 4px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+.backBtn:active {
+  background-color: #F1F5F9;
+}
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main, #0F172A);
+  flex: 1;
+}
+
+.content {
+  padding: 16px;
+}
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+.emptyState h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main, #0F172A);
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.emptyState p {
+  font-size: 14px;
+  color: var(--text-muted, #64748B);
+}
+
+.notificationList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.notificationCard {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  border: 1px solid #E2E8F0;
+  position: relative;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+.notificationUnread {
+  background: #F0F9FF;
+  border-color: #BAE6FD;
+}
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #EFF6FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.4s ease;
+}
+.notificationUnread .iconWrapper {
+  background: #3B82F6;
+}
+.textContent {
+  flex: 1;
+}
+.notificationTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main, #0F172A);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.unreadDot {
+  width: 8px;
+  height: 8px;
+  background-color: #EF4444;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 8px;
+}
+.notificationMessage {
+  font-size: 13px;
+  color: var(--text-muted, #475569);
+  line-height: 1.5;
+}
+.timestamp {
+  font-size: 11px;
+  color: #94A3B8;
+  margin-top: 8px;
+  display: block;
+}

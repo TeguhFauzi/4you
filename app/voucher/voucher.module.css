@@ -1,0 +1,171 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--bg-color, #F8FAFC);
+  padding-bottom: 40px;
+}
+.header {
+  background: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.backBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main, #0F172A);
+  padding: 4px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+.backBtn:active {
+  background-color: #F1F5F9;
+}
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main, #0F172A);
+  flex: 1;
+}
+
+.content {
+  padding: 20px;
+}
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+.emptyState h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main, #0F172A);
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.emptyState p {
+  font-size: 14px;
+  color: var(--text-muted, #64748B);
+}
+
+.voucherList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.voucherCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #E2E8F0;
+}
+.voucherLeft {
+  background: #EFF6FF;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px dashed #CBD5E1;
+  position: relative;
+  min-width: 100px;
+}
+/* Cutouts for ticket effect */
+.voucherLeft::before, .voucherLeft::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--bg-color, #F8FAFC);
+  border-radius: 50%;
+  border-left: 1px solid #E2E8F0;
+}
+.voucherLeft::before {
+  top: -10px;
+  border-bottom: 1px solid #E2E8F0;
+}
+.voucherLeft::after {
+  bottom: -10px;
+  border-top: 1px solid #E2E8F0;
+}
+.discountAmount {
+  font-size: 20px;
+  font-weight: 800;
+  color: #2563EB;
+}
+.discountLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: #3B82F6;
+  text-transform: uppercase;
+}
+
+.voucherRight {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.voucherTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main, #0F172A);
+  margin-bottom: 4px;
+}
+.voucherCode {
+  display: inline-block;
+  background: #F1F5F9;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 12px;
+  align-self: flex-start;
+  letter-spacing: 1px;
+}
+.statusBadge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  align-self: flex-start;
+}
+.statusActive {
+  background: #DCFCE7;
+  color: #16A34A;
+}
+.statusUsed {
+  background: #F1F5F9;
+  color: #94A3B8;
+}
+
+/* Modifier for used state */
+.voucherUsed .voucherLeft {
+  background: #F8FAFC;
+  border-right-color: #E2E8F0;
+}
+.voucherUsed .discountAmount, .voucherUsed .discountLabel {
+  color: #94A3B8;
+}
+.voucherUsed .voucherTitle, .voucherUsed .voucherCode {
+  color: #94A3B8;
+}

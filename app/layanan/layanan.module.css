@@ -1,0 +1,91 @@
+.main {
+  padding-bottom: 80px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+.header {
+  padding: 24px 20px 16px;
+  background-color: var(--surface-color);
+}
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+.subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.searchContainer {
+  padding: 0 20px 16px;
+  background-color: var(--surface-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-color);
+  border-radius: var(--radius-xl);
+  padding: 12px 16px;
+  gap: 12px;
+}
+.searchInput {
+  border: none;
+  background: transparent;
+  flex: 1;
+  font-size: 14px;
+  color: var(--text-main);
+  outline: none;
+}
+.searchInput::placeholder {
+  color: #94A3B8;
+}
+.listContainer {
+  padding: 16px 20px;
+}
+.skeletonCard {
+  display: flex;
+  background: var(--surface-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid var(--border-color);
+}
+.skeletonImage {
+  width: 100px;
+  min-width: 100px;
+  height: 120px;
+}
+.skeletonContent {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.skeletonTitle {
+  height: 20px;
+  width: 60%;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+.skeletonDesc {
+  height: 14px;
+  width: 90%;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+.skeletonPrice {
+  height: 16px;
+  width: 40%;
+  border-radius: 4px;
+}
+.error {
+  text-align: center;
+  color: #EF4444;
+  padding: 24px;
+  font-size: 14px;
+}

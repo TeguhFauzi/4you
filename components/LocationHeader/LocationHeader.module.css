@@ -1,0 +1,113 @@
+.header {
+  padding: 16px 20px;
+}
+.locationWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 10px 16px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.locationWrapper:active {
+  transform: scale(0.98);
+  background: rgba(255, 255, 255, 0.8);
+}
+.locationIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.locationText {
+  display: flex;
+  flex-direction: column;
+}
+.locationLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.locationAction {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.loadingText {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-blue);
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Modal Popup Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+.modalContent {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  animation: slideUp 0.3s ease;
+}
+.modalContent h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #EF4444; /* red-500 */
+  margin-bottom: 12px;
+}
+.modalContent p {
+  font-size: 14px;
+  color: var(--text-main);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+.closeBtn {
+  background: var(--primary-blue);
+  color: white;
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+.closeBtn:active {
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
